@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | BayonBanquet Fine Dining</title>
+    <link rel="stylesheet" href="Css/contact.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-stone-50 text-stone-600 font-sans">
+
+    <!-- ── Header ── -->
+    <header class="bg-white border-b border-stone-200 sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="font-serif text-2xl font-bold text-stone-700">
+                Bayon<span class="text-amber-500">Banquet</span>
+            </a>
+            <input id="nav-toggle" class="toggle" type="checkbox" aria-controls="primary-menu" aria-expanded="false" />
+            <label for="nav-toggle" class="toggle-label" aria-label="Toggle navigation">☰ <span>Menu</span></label>
+            <nav id="primary-menu" class="flex gap-8">
+                <a href="index.html"    class="nav-link         font-semibold text-sm text-stone-600">Home</a>
+                <a href="menu.html"     class="nav-link         font-semibold text-sm text-stone-600">Menu</a>
+                <a href="about.html"    class="nav-link         font-semibold text-sm text-stone-600">About</a>
+                <a href="contact.html"  class="nav-link active  font-semibold text-sm text-stone-600">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ── Page Banner ── -->
+    <div class="bg-stone-900 text-white text-center py-16">
+        <h1 class="font-serif text-4xl font-bold mb-2">Contact Us</h1>
+        <p class="text-stone-400">We'd love to welcome you to our table</p>
+    </div>
+
+    <!-- ── Contact Section ── -->
+    <section class="py-20">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+
+                <!-- Contact Details -->
+                <div>
+                    <h2 class="font-serif text-3xl font-bold text-stone-700 mb-8">Get in Touch</h2>
+
+                    <div class="flex gap-5 mb-7">
+                        <div class="text-2xl mt-1">📍</div>
+                        <div>
+                            <h4 class="font-bold text-stone-700 mb-1">Address</h4>
+                            <p class="text-stone-500 leading-relaxed">......<br>Phnom Penh, Cambodia<br></p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-5 mb-7">
+                        <div class="text-2xl mt-1">📞</div>
+                        <div>
+                            <h4 class="font-bold text-stone-700 mb-1">Phone</h4>
+                            <p class="text-stone-500">(855) 123-4567</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-5 mb-7">
+                        <div class="text-2xl mt-1">✉️</div>
+                        <div>
+                            <h4 class="font-bold text-stone-700 mb-1">Email</h4>
+                            <p class="text-stone-500">reservations@bayonbanquet.com</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-5 mb-8">
+                        <div class="text-2xl mt-1">🕐</div>
+                        <div>
+                            <h4 class="font-bold text-stone-700 mb-1">Opening Hours</h4>
+                            <p class="text-stone-500 leading-relaxed">
+                                Tuesday – Friday: 5:00 PM – 10:00 PM<br>
+                                Saturday – Sunday: 12:00 PM – 10:00 PM<br>
+                                Monday: Closed
+                            </p>
+                        </div>
+                    </div>
+
+                <!-- Reservation Form -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h2 class="font-serif text-2xl font-bold text-stone-700 mb-6">Reserve a Table</h2>
+
+                    <form action="#" method="post">
+                        <!-- Full Name -->
+                        <div class="mb-5">
+                            <label for="name" class="block text-sm font-semibold text-stone-700 mb-1">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your full name"
+                                   class="w-full px-4 py-3 border border-stone-300 rounded-lg bg-stone-50 text-stone-700 text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-200"
+                                   required>
+                        </div>
+
+                        <!-- Email & Phone -->
+                        <div class="grid grid-cols-2 gap-4 mb-5">
+                            <div>
+                                <label for="email" class="block text-sm font-semibold text-stone-700 mb-1">Email</label>
+                                <input type="email" id="email" name="email" placeholder="your@email.com"
+                                       class="w-full px-4 py-3 border border-stone-300 rounded-lg bg-stone-50 text-stone-700 text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-200"
+                                       required>
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-semibold text-stone-700 mb-1">Phone</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+(855) 000-0000"
+                                       class="w-full px-4 py-3 border border-stone-300 rounded-lg bg-stone-50 text-stone-700 text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-200"
+                                       required>
+                            </div>
+                        </div>
+
+                        <!-- Date & Time -->
+                        <div class="grid grid-cols-2 gap-4 mb-5">
+                            <div>
+                                <label for="date" class="block text-sm font-semibold text-stone-700 mb-1">Date</label>
+                                <input type="date" id="date" name="date"
+                                       class="w-full px-4 py-3 border border-stone-300 rounded-lg bg-stone-50 text-stone-700 text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-200"
+                                       required>
+                            </div>
+                            <div>
+                                <label for="time" class="block text-sm font-semibold text-stone-700 mb-1">Time</label>
+                                <select id="time" name="time"
+                                        class="w-full px-4 py-3 border border-stone-300 rounded-lg bg-stone-50 text-stone-700 text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-200"
+                                        required>
+                                    <option value="">Select time</option>
+                                    <option value="17:00">5:00 PM</option>
+                                    <option value="17:30">5:30 PM</option>
+                                    <option value="18:00">6:00 PM</option>
+                                    <option value="18:30">6:30 PM</option>
+                                    <option value="19:00">7:00 PM</option>
+                                    <option value="19:30">7:30 PM</option>
+                                    <option value="20:00">8:00 PM</option>
+                                    <option value="20:30">8:30 PM</option>
+                                    <option value="21:00">9:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Guests -->
+                        <div class="mb-5">
+                            <label for="guests" class="block text-sm font-semibold text-stone-700 mb-1">Number of Guests</label>
+                            <select id="guests" name="guests"
+                                    class="w-full px-4 py-3 border border-stone-300 rounded-lg bg-stone-50 text-stone-700 text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-200"
+                                    required>
+                                <option value="">Select number of guests</option>
+                                <option value="1">1 person</option>
+                                <option value="2">2 people</option>
+                                <option value="3">3 people</option>
+                                <option value="4">4 people</option>
+                                <option value="5">5 people</option>
+                                <option value="6">6 people</option>
+                                <option value="7">7 people</option>
+                                <option value="8">8 people</option>
+                                <option value="9">9+ people (please call us)</option>
+                            </select>
+                        </div>
+
+                        <!-- Special Requests -->
+                        <div class="mb-6">
+                            <label for="requests" class="block text-sm font-semibold text-stone-700 mb-1">Special Requests</label>
+                            <textarea id="requests" name="requests"
+                                      placeholder="Dietary requirements, celebrations, or anything else..."
+                                      class="w-full px-4 py-3 border border-stone-300 rounded-lg bg-stone-50 text-stone-700 text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-200 h-28 resize-y"></textarea>
+                        </div>
+
+                        <button type="submit"
+                                class="w-full bg-amber-500 hover:bg-amber-600 text-white font-semibold py-4 rounded-lg transition-colors">
+                            Confirm Reservation
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Footer ── -->
+    <footer class="bg-stone-900 text-stone-400 pt-16 pb-8 border-t border-stone-800">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
+                <div>
+                    <a href="index.html" class="font-serif text-xl font-bold text-white">bayon<span class="text-amber-500">Banquet</span></a>
+                    <p class="text-sm mt-3 leading-relaxed">Where every meal is a masterpiece, crafted with passion.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html"   class="hover:text-amber-500 transition-colors">Home</a></li>
+                        <li><a href="menu.html"    class="hover:text-amber-500 transition-colors">Menu</a></li>
+                        <li><a href="about.html"   class="hover:text-amber-500 transition-colors">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-amber-500 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Opening Hours</h4>
+                    <p class="text-sm leading-relaxed">Tuesday – Sunday<br>5:00 PM – 10:00 PM<br><br>Closed on Mondays</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Contact</h4>
+                    <p class="text-sm leading-relaxed">123 Toul Kork<br>Phnom Penh, Cambodia<br><br>(855) 123-4567<br>reservations@bayonbanquet.com</p>
+                </div>
+            </div>
+            <div class="border-t border-stone-800 pt-6 text-center text-xs">
+                <p>&copy; 2026 BayonBanquet Fine Dining. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
