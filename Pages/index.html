@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BayonBanquet | Fine Dining</title>
+    <link href="/Css/index.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-stone-50 text-stone-600 font-sans">
+
+    <!-- ── Header ── -->
+    <header class="bg-white border-b border-stone-200 sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="font-serif text-2xl font-bold text-stone-700">
+                Bayon<span class="text-amber-500">Banquet</span>
+            </a>
+            <input id="nav-toggle" class="toggle" type="checkbox" aria-controls="primary-menu" aria-expanded="false" />
+            <label for="nav-toggle" class="toggle-label" aria-label="Toggle navigation">☰ <span>Menu</span></label>
+            <nav id="primary-menu" class="flex gap-8">
+                <a href="index.html"    class="nav-link active  font-semibold text-sm text-stone-600">Home</a>
+                <a href="/Pages/menu.html"     class="nav-link         font-semibold text-sm text-stone-600">Menu</a>
+                <a href="/Pages/about.html"    class="nav-link         font-semibold text-sm text-stone-600">About</a>
+                <a href="/Pages/contact.html"  class="nav-link         font-semibold text-sm text-stone-600">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ── Hero ── -->
+    <section class="hero-bg relative min-h-screen flex items-center justify-center text-center text-white">
+        <div class="absolute inset-0 bg-black/55"></div>
+        <div class="relative z-10 max-w-2xl px-6">
+            <h1 class="font-serif text-5xl md:text-6xl font-bold leading-tight mb-6">
+                Experience The Best Khmer Foods in Town
+            </h1>
+            <p class="text-lg text-stone-200 mb-8">
+                You can enjoy your favorite food and we will deliver it as you want. Also you can reserve a table for you and your loved ones to enjoy the food together. 
+            </p>
+            <a href="contact.html"
+               class="inline-block bg-amber-500 hover:bg-amber-600 text-white font-semibold px-10 py-4 rounded-lg transition-colors">
+                Reserve a Table
+            </a>
+        </div>
+    </section>
+
+    <!-- ── Why Choose Us ── -->
+    <section class="bg-stone-100 py-20">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h2 class="font-serif text-4xl font-bold text-stone-700 mb-3">Why Choose BayonBanquet</h2>
+            <p class="text-stone-400 text-lg mb-12">Everything we do is guided by a passion for exceptional Khmer dishes</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="bg-white rounded-xl p-8 shadow card-hover">
+                    <div class="text-4xl mb-4">🍽️</div>
+                    <h3 class="font-serif text-lg font-bold text-stone-700 mb-2">Fine Cuisine</h3>
+                    <p class="text-sm text-stone-500">Award-winning chefs using the finest seasonal ingredients.</p>
+                </div>
+                <div class="bg-white rounded-xl p-8 shadow card-hover">
+                    <div class="text-4xl mb-4">🍷</div>
+                    <h3 class="font-serif text-lg font-bold text-stone-700 mb-2">Curated Drinks</h3>
+                    <p class="text-sm text-stone-500">Over 200 labels hand-picked from the world's finest vineyards.</p>
+                </div>
+                <div class="bg-white rounded-xl p-8 shadow card-hover">
+                    <div class="text-4xl mb-4">✨</div>
+                    <h3 class="font-serif text-lg font-bold text-stone-700 mb-2">Good Khmer Food</h3>
+                    <p class="text-sm text-stone-500">A warm, intimate setting for every memorable occasion.</p>
+                </div>
+                <div class="bg-white rounded-xl p-8 shadow card-hover">
+                    <div class="text-4xl mb-4">👨‍🍳</div>
+                    <h3 class="font-serif text-lg font-bold text-stone-700 mb-2">Expert Service</h3>
+                    <p class="text-sm text-stone-500">Attentive team ensuring your comfort from arrival to dessert.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Featured Dishes ── -->
+    <section class="py-20">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h2 class="font-serif text-4xl font-bold text-stone-700 mb-3">Signature Creations</h2>
+            <p class="text-stone-400 text-lg mb-12">A glimpse of what awaits you at our table</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Dish 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow card-hover">
+                    <img src="https://www.tasteofharmony.org.au/wp-content/uploads/2018/02/Curried-fish-scaled.jpg"
+                         alt="Truffle Risotto" class="w-full h-52 object-cover">
+                    <div class="p-5 text-left">
+                        <h3 class="font-serif text-lg font-bold text-stone-700 mb-1">Amok Trey</h3>
+                        <p class="text-sm text-stone-400 mb-3">This delightful combination of fish with a rich spicy coconut-based custard, steamed in a creative cup made with banana leaves, is very unique and simply exquisite.</p>
+                        <span class="text-amber-500 font-bold">$9.99</span>
+                    </div>
+                </div>
+                <!-- Dish 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow card-hover">
+                    <img src="https://thf.bing.com/th/id/R.c5844e5eb9da953d1afbc7c64d01043f?rik=8Ox2cRf1m8EU0w&pid=ImgRaw&r=0"
+                         alt="Wagyu Beef" class="w-full h-52 object-cover">
+                    <div class="p-5 text-left">
+                        <h3 class="font-serif text-lg font-bold text-stone-700 mb-1">Lok Lak</h3>
+                        <p class="text-sm text-stone-400 mb-3">Tender beef strips in a savory sauce with fresh herbs and vegetables</p>
+                        <span class="text-amber-500 font-bold">$8.00</span>
+                    </div>
+                </div>
+                <!-- Dish 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow card-hover">
+                    <img src="https://i.pinimg.com/originals/2b/ea/65/2bea65b22acaf1c16102750c8cf2b183.jpg"
+                         alt="Seafood Platter" class="w-full h-52 object-cover">
+                    <div class="p-5 text-left">
+                        <h3 class="font-serif text-lg font-bold text-stone-700 mb-1">Num I</h3>
+                        <p class="text-sm text-stone-400 mb-3">Khmer Glutinous Rice Ball Desserts are more like boba balls but made with rice flour. This dessert has two main elements: the rice balls and the coconut cream sauce with which the Glutinous Rice Balls are dressed.</p>
+                        <span class="text-amber-500 font-bold">$1.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <a href="menu.html"
+               class="inline-block mt-10 bg-amber-500 hover:bg-amber-600 text-white font-semibold px-10 py-4 rounded-lg transition-colors">
+                View Full Menu
+            </a>
+        </div>
+    </section>
+
+    <!-- ── CTA Banner ── -->
+    <section class="bg-stone-900 text-white text-center py-20">
+        <div class="max-w-2xl mx-auto px-6">
+            <h2 class="font-serif text-4xl font-bold mb-4">Ready for an Unforgettable Khmer Meal?</h2>
+            <p class="text-stone-400 text-lg mb-8">Book your table today and let us take care of the rest.</p>
+            <a href="contact.html"
+               class="inline-block border-2 border-white hover:bg-white hover:text-stone-900 text-white font-semibold px-10 py-4 rounded-lg transition-colors">
+                Make a Reservation
+            </a>
+        </div>
+    </section>
+
+    <!-- ── Footer ── -->
+    <footer class="bg-stone-900 text-stone-400 pt-16 pb-8 border-t border-stone-800">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
+                <div>
+                    <a href="index.html" class="font-serif text-xl font-bold text-white">
+                        Bayon<span class="text-amber-500">Banquet</span>
+                    </a>
+                    <p class="text-sm mt-3 leading-relaxed">Where every meal is a masterpiece, crafted with passion.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html"   class="hover:text-amber-500 transition-colors">Home</a></li>
+                        <li><a href="menu.html"    class="hover:text-amber-500 transition-colors">Menu</a></li>
+                        <li><a href="about.html"   class="hover:text-amber-500 transition-colors">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-amber-500 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Opening Hours</h4>
+                    <p class="text-sm leading-relaxed">Tuesday – Sunday<br>5:00 PM – 10:00 PM<br><br>Closed on Mondays</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Contact</h4>
+                    <p class="text-sm leading-relaxed">123 Toul Kork<br>Phnom Penh, Cambodia<br><br>(855) 123-4567<br>reservations@bayonbanquet.com</p>
+                </div>
+            </div>
+            <div class="border-t border-stone-800 pt-6 text-center text-xs">
+                <p>&copy; 2024 BayonBanquet Fine Dining. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BayonBanquet Fine Dining</title>
+    <link rel="stylesheet" href="/Css/about.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-stone-50 text-stone-600 font-sans">
+
+    <!-- ── Header ── -->
+    <header class="bg-white border-b border-stone-200 sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="/Pages/index.html" class="font-serif text-2xl font-bold text-stone-700">
+                Bayon<span class="text-amber-500">Banquet</span>
+            </a>
+            <input id="nav-toggle" class="toggle" type="checkbox" aria-controls="primary-menu" aria-expanded="false" />
+            <label for="nav-toggle" class="toggle-label" aria-label="Toggle navigation">☰ <span>Menu</span></label>
+            <nav id="primary-menu" class="flex gap-8">
+                <a href="/Pages/index.html"    class="nav-link         font-semibold text-sm text-stone-600">Home</a>
+                <a href="/Pages/menu.html"     class="nav-link         font-semibold text-sm text-stone-600">Menu</a>
+                <a href="/Pages/about.html"    class="nav-link active  font-semibold text-sm text-stone-600">About</a>
+                <a href="/Pages/contact.html"  class="nav-link         font-semibold text-sm text-stone-600">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ── Page Banner ── -->
+    <div class="bg-stone-900 text-white text-center py-16">
+        <h1 class="font-serif text-4xl font-bold mb-2">About Us</h1>
+        <p class="text-stone-400">Our story, our people, our passion</p>
+    </div>
+
+    <!-- ── Our Story ── -->
+    <section class="py-20">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80"
+                     alt="Inside Élégance restaurant"
+                     class="w-full h-96 object-cover rounded-xl shadow-lg">
+                <div>
+                    <h2 class="font-serif text-3xl font-bold text-stone-700 mb-5">A Passion for the Table</h2>
+                    <p class="mb-4 leading-relaxed">BayonBanquet is a culinary journey that celebrates the rich flavors and traditions of Cambodia and Southeast Asia.</p>
+                    <p class="mb-4 leading-relaxed">Nestled in the heart of PhnomPenh City, we invite you to experience the vibrant culture and exquisite cuisine of Cambodia. we have been serving authentic Khmer dishes for over a decade.</p>
+                    <a href="/Pages/menu.html"
+                       class="inline-block bg-amber-500 hover:bg-amber-600 text-white font-semibold px-8 py-3 rounded-lg transition-colors">
+                        Explore Our Menu
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Values ── -->
+    <section class="bg-stone-100 py-20">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h2 class="font-serif text-4xl font-bold text-stone-700 mb-3">What We Stand For</h2>
+            <p class="text-stone-400 text-lg mb-12">The principles behind every plate</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl p-8 shadow card-hover">
+                    <div class="text-4xl mb-4">🌿</div>
+                    <h3 class="font-serif text-lg font-bold text-stone-700 mb-2">Fresh & Local</h3>
+                    <p class="text-sm text-stone-500">We partner with local farms to bring the finest seasonal produce to your plate every day.</p>
+                </div>
+                <div class="bg-white rounded-xl p-8 shadow card-hover">
+                    <div class="text-4xl mb-4">🎨</div>
+                    <h3 class="font-serif text-lg font-bold text-stone-700 mb-2">Creative Excellence</h3>
+                    <p class="text-sm text-stone-500">Classical French technique meets modern creativity to deliver dishes that surprise and delight.</p>
+                </div>
+                <div class="bg-white rounded-xl p-8 shadow card-hover">
+                    <div class="text-4xl mb-4">🤝</div>
+                    <h3 class="font-serif text-lg font-bold text-stone-700 mb-2">Genuine Hospitality</h3>
+                    <p class="text-sm text-stone-500">Great service means making every guest feel like the only guest in the room.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Footer ── -->
+    <footer class="bg-stone-900 text-stone-400 pt-16 pb-8 border-t border-stone-800">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
+                <div>
+                    <a href="index.html" class="font-serif text-xl font-bold text-white">Bayon<span class="text-amber-500">Banquet</span></a>
+                    <p class="text-sm mt-3 leading-relaxed">Where every meal is a masterpiece, crafted with passion.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html"   class="hover:text-amber-500 transition-colors">Home</a></li>
+                        <li><a href="menu.html"    class="hover:text-amber-500 transition-colors">Menu</a></li>
+                        <li><a href="about.html"   class="hover:text-amber-500 transition-colors">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-amber-500 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Opening Hours</h4>
+                    <p class="text-sm leading-relaxed">Tuesday – Sunday<br>5:00 PM – 10:00 PM<br><br>Closed on Mondays</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Contact</h4>
+                    <p class="text-sm leading-relaxed">123 Toul Kork<br>Phnom Penh, Cambodia<br><br>(855) 123-4567<br>reservations@bayonbanquet.com</p>
+                </div>
+            </div>
+            <div class="border-t border-stone-800 pt-6 text-center text-xs">
+                <p>&copy; 2026 BayonBanquet Fine Dining. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
