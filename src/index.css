@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+html { scroll-behavior: smooth; }
+
+.hero-bg {
+  background-image: url('https://www.agoda.com/wp-content/uploads/2024/02/Featured-photo-Cambodia-restaurants-1024x576.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.nav-link {
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s, border-color 0.3s;
+  padding-bottom: 4px;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: #f59e0b;
+  border-bottom-color: #f59e0b;
+}
