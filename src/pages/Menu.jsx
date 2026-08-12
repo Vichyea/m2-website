@@ -3,7 +3,7 @@ import DishCard from '../components/DishCard';
 
 const categories = [
   {
-  name: 'Appetizers',
+  name: 'Starters',
   dishes: [
     { image: '/images/Amok.png', title: 'Amok Trey', description: 'A traditional Cambodian fish dish cooked with coconut milk, kroeung, and spices.', price: '5.00' },
     { image: '/images/NumI.png', title: 'Num I', description: 'Soft Khmer glutinous rice balls filled with palm sugar and served with coconut cream.', price: '1.00' },
