@@ -55,29 +55,38 @@ export default function Navbar() {
 
           {/* Auth links */}
           {currentUser ? (
-            <>
+            <div className="flex flex-col md:flex-row items-start md:items-center gap-4 px-6 py-3 md:px-0 md:py-0 border-b md:border-b-0 border-stone-100">
               <Link
                 to="/dashboard"
                 onClick={() => setOpen(false)}
-                className={`nav-link font-semibold text-sm text-stone-600 px-6 py-3 md:px-0 md:py-0 border-b md:border-b-0 border-stone-100 ${isActive('/dashboard')}`}
+                className={`nav-link font-semibold text-sm text-stone-600 ${isActive('/dashboard')}`}
               >
                 Dashboard
               </Link>
-              <button
-                onClick={() => { handleLogout(); setOpen(false); }}
-                className="font-semibold text-sm text-stone-600 hover:text-amber-500 transition-colors px-6 py-3 md:px-0 md:py-0 text-left"
-              >
-                Logout
-              </button>
-            </>
+              <div className="flex items-center gap-3 md:pl-2">
+                <img
+                  src={currentUser.photoURL || `https://ui-avatars.com/api/?name=${currentUser.email || 'User'}&background=f59e0b&color=fff`}
+                  alt="User Avatar"
+                  className="w-8 h-8 rounded-full border border-stone-200 shadow-sm"
+                />
+                <button
+                  onClick={() => { handleLogout(); setOpen(false); }}
+                  className="font-semibold text-sm text-stone-600 hover:text-amber-500 transition-colors text-left"
+                >
+                  Logout
+                </button>
+              </div>
+            </div>
           ) : (
-            <Link
-              to="/login"
-              onClick={() => setOpen(false)}
-              className={`nav-link font-semibold text-sm text-stone-600 px-6 py-3 md:px-0 md:py-0 ${isActive('/login')}`}
-            >
-              Login
-            </Link>
+            <div className="px-6 py-3 md:px-0 md:py-0 md:pl-2 border-b md:border-b-0 border-stone-100">
+              <Link
+                to="/login"
+                onClick={() => setOpen(false)}
+                className="inline-block bg-amber-500 hover:bg-amber-600 text-white font-semibold text-sm px-5 py-2 rounded-lg transition-colors"
+              >
+                Login
+              </Link>
+            </div>
           )}
         </nav>
       </div>
