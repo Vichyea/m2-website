@@ -5,25 +5,25 @@ const categories = [
   {
     name: 'Appetizers',
     dishes: [
-      { image: 'https://www.tasteofharmony.org.au/wp-content/uploads/2018/02/Curried-fish-scaled.jpg', title: 'Amok Trey', description: 'Fish with rich spicy coconut-based custard, steamed in banana leaves.', price: '9.99' },
-      { image: 'https://i.pinimg.com/originals/2b/ea/65/2bea65b22acaf1c16102750c8cf2b183.jpg', title: 'Num I', description: 'Khmer Glutinous Rice Ball Desserts with coconut cream sauce.', price: '1.00' },
-      { image: 'https://thf.bing.com/th/id/R.c5844e5eb9da953d1afbc7c64d01043f?rik=8Ox2cRf1m8EU0w&pid=ImgRaw&r=0', title: 'Lok Lak', description: 'Tender beef strips in a savory sauce with fresh herbs and vegetables.', price: '8.00' },
+      { image: '/images/Amok.png', title: 'Amok Trey', description: 'Fish with rich spicy coconut-based custard, steamed in banana leaves.', price: '9.99' },
+      { image: '/images/NumI.png', title: 'Num I', description: 'Khmer Glutinous Rice Ball Desserts with coconut cream sauce.', price: '1.00' },
+      { image: '/images/LokLak.png', title: 'Lok Lak', description: 'Tender beef strips in a savory sauce with fresh herbs and vegetables.', price: '8.00' },
     ],
   },
   {
     name: 'Main Courses',
     dishes: [
-      { image: 'https://www.tasteofharmony.org.au/wp-content/uploads/2018/02/Curried-fish-scaled.jpg', title: 'Samlor Korko', description: 'A traditional Khmer soup with rich kroeung paste, vegetables and pork.', price: '7.50' },
-      { image: 'https://thf.bing.com/th/id/R.c5844e5eb9da953d1afbc7c64d01043f?rik=8Ox2cRf1m8EU0w&pid=ImgRaw&r=0', title: 'Bai Sach Chrouk', description: 'Grilled pork with rice, a beloved Cambodian breakfast dish.', price: '5.00' },
-      { image: 'https://i.pinimg.com/originals/2b/ea/65/2bea65b22acaf1c16102750c8cf2b183.jpg', title: 'Kuy Teav', description: 'Cambodian noodle soup with pork broth, herbs, and bean sprouts.', price: '4.50' },
+      { image: '/images/Samlar Kari.png', title: 'Samlor Korko', description: 'A traditional Khmer soup with rich kroeung paste, vegetables and pork.', price: '7.50' },
+      { image: '/images/PorkAndRice.png', title: 'Bai Sach Chrouk', description: 'Grilled pork with rice, a beloved Cambodian breakfast dish.', price: '5.00' },
+      { image: '/images/Morn Dot.png', title: 'Kuy Teav', description: 'Cambodian noodle soup with pork broth, herbs, and bean sprouts.', price: '4.50' },
     ],
   },
   {
     name: 'Desserts',
     dishes: [
-      { image: 'https://i.pinimg.com/originals/2b/ea/65/2bea65b22acaf1c16102750c8cf2b183.jpg', title: 'Num Ansom', description: 'Sticky rice cake with banana or pork, wrapped in banana leaves.', price: '2.00' },
-      { image: 'https://www.tasteofharmony.org.au/wp-content/uploads/2018/02/Curried-fish-scaled.jpg', title: 'Cha Houy Teuk', description: 'Khmer jelly dessert made with agar and coconut milk.', price: '1.50' },
-      { image: 'https://thf.bing.com/th/id/R.c5844e5eb9da953d1afbc7c64d01043f?rik=8Ox2cRf1m8EU0w&pid=ImgRaw&r=0', title: 'Num Plae Ai', description: 'Sweet dumplings in warm coconut milk with palm sugar.', price: '1.50' },
+      { image: '/images/Num Treap.png', title: 'Num Ansom', description: 'Sticky rice cake with banana or pork, wrapped in banana leaves.', price: '2.00' },
+      { image: '/images/Kh Jelley Desert.png', title: 'Cha Houy Teuk', description: 'Khmer jelly dessert made with agar and coconut milk.', price: '1.50' },
+      { image: '/images/Num Chak Kachan.png', title: 'Num Plae Ai', description: 'Sweet dumplings in warm coconut milk with palm sugar.', price: '1.50' },
     ],
   },
 ];

@@ -3,19 +3,19 @@ import DishCard from '../components/DishCard';
 
 const dishes = [
   {
-    image: 'https://www.tasteofharmony.org.au/wp-content/uploads/2018/02/Curried-fish-scaled.jpg',
+    image: '/images/Amok.png',
     title: 'Amok Trey',
     description: 'This delightful combination of fish with a rich spicy coconut-based custard, steamed in a creative cup made with banana leaves, is very unique and simply exquisite.',
     price: '9.99',
   },
   {
-    image: 'https://thf.bing.com/th/id/R.c5844e5eb9da953d1afbc7c64d01043f?rik=8Ox2cRf1m8EU0w&pid=ImgRaw&r=0',
+    image: '/images/LokLak.png',
     title: 'Lok Lak',
     description: 'Tender beef strips in a savory sauce with fresh herbs and vegetables',
     price: '8.00',
   },
   {
-    image: 'https://i.pinimg.com/originals/2b/ea/65/2bea65b22acaf1c16102750c8cf2b183.jpg',
+    image: '/images/NumI.png',
     title: 'Num I',
     description: 'Khmer Glutinous Rice Ball Desserts are more like boba balls but made with rice flour. This dessert has two main elements: the rice balls and the coconut cream sauce with which the Glutinous Rice Balls are dressed.',
     price: '1.00',
