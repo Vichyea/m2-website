@@ -5,7 +5,6 @@ import { updateProfile } from 'firebase/auth';
 export default function Profile() {
   const { currentUser } = useAuth();
   const [name, setName] = useState(currentUser?.displayName || '');
-  const [photoURL, setPhotoURL] = useState(currentUser?.photoURL || '');
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
@@ -19,7 +18,6 @@ export default function Profile() {
     try {
       await updateProfile(currentUser, {
         displayName: name,
-        photoURL: photoURL,
       });
       // Force reload to update context/navbar if needed, or just show message
       setMessage('Profile updated successfully! Refreshing...');
@@ -55,6 +53,17 @@ export default function Profile() {
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
+              <label className="block text-sm font-semibold text-stone-600 mb-1">Email Address</label>
+              <input
+                type="email"
+                value={currentUser.email}
+                disabled
+                className="w-full px-4 py-3 border border-stone-200 rounded-lg bg-stone-50 text-stone-500 cursor-not-allowed"
+              />
+              <p className="text-xs text-stone-400 mt-1">Email cannot be changed.</p>
+            </div>
+            
+            <div>
               <label className="block text-sm font-semibold text-stone-600 mb-1">Display Name</label>
               <input
                 type="text"
@@ -63,17 +72,6 @@ export default function Profile() {
                 className="w-full px-4 py-3 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 transition"
                 placeholder="Your Name"
               />
-            </div>
-            <div>
-              <label className="block text-sm font-semibold text-stone-600 mb-1">Profile Picture URL</label>
-              <input
-                type="url"
-                value={photoURL}
-                onChange={(e) => setPhotoURL(e.target.value)}
-                className="w-full px-4 py-3 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 transition"
-                placeholder="https://example.com/my-photo.jpg"
-              />
-              <p className="text-xs text-stone-400 mt-1">Paste a link to an image (imgur, etc.)</p>
             </div>
 
             <button

@@ -42,7 +42,7 @@ export default function Navbar() {
         {/* Nav links */}
         <nav className={`${
           open ? 'flex' : 'hidden'
-        } md:flex flex-col md:flex-row gap-0 md:gap-8 absolute md:static top-full left-0 right-0 bg-white md:bg-transparent border-b md:border-0 border-stone-200 shadow-md md:shadow-none z-40`}>
+        } md:flex flex-col md:flex-row items-center gap-0 md:gap-8 absolute md:static top-full left-0 right-0 bg-white md:bg-transparent border-b md:border-0 border-stone-200 shadow-md md:shadow-none z-40`}>
           {links.map((link) => (
             <Link
               key={link.to}
