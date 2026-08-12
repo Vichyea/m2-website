@@ -13,11 +13,15 @@ export default function Dashboard() {
       try {
         const q = query(
           collection(db, 'reservations'),
-          where('userId', '==', currentUser.uid),
-          orderBy('createdAt', 'desc')
+          where('userId', '==', currentUser.uid)
         );
         const snapshot = await getDocs(q);
-        setReservations(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+        
+        // Sort on the client side to avoid needing a Firestore composite index
+        const resData = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+        resData.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+        
+        setReservations(resData);
       } catch (err) {
         console.error('Error fetching reservations:', err);
       }
