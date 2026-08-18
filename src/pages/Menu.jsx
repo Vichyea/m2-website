@@ -17,7 +17,7 @@ const categories = [
     { image: '/images/PorkAndRice.png', title: 'Bai Sach Chrouk', description: 'Grilled marinated pork served with steamed rice, pickled vegetables, and a light soup.', price: '5.00' },
     { image: '/images/Morn Dot.png', title: 'Morn Dot', description: 'Grilled chicken marinated with Cambodian spices and served with fresh vegetables and sauce.', price: '15.50' },
     { image: '/images/p\'hok dot.png', title: 'P\'hok Dot', description: 'A traditional Cambodian dish made with grilled meat, fresh herbs, and a flavorful dipping sauce.', price: '5.50' },
-    { image: '/images/BokLhong.png', title: 'Bok Lhon', description: 'A fresh and spicy Cambodian salad made with papaya, vegetables, herbs, and a flavorful dressing.', price: '4.50' },
+    { image: '/images/BokLhong.png', title: 'Bok Lhong', description: 'A fresh and spicy Cambodian salad made with papaya, vegetables, herbs, and a flavorful dressing.', price: '4.50' },
     { image: '/images/LokLak.png', title: 'Lok Lak', description: 'Stir-fried tender beef served with fresh vegetables and a tangy lime and pepper sauce.', price: '8.00' },
     { image: '/images/Ko Dot.png', title: 'Ko Dot', description: 'Grilled beef seasoned with Cambodian spices and served with fresh vegetables and dipping sauce.', price: '4.50' },
     { image: '/images/Amok.png', title: 'Amok Trey', description: 'A traditional Cambodian fish dish cooked with coconut milk, kroeung, and spices.', price: '5.00' },
