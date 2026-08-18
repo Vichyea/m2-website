@@ -5,7 +5,7 @@ import { useAuth } from '../context/AuthContext';
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const { currentUser, logout } = useAuth();
+  const { currentUser, isAdmin, logout } = useAuth();
   const location = useLocation();
 
   const links = [
@@ -71,13 +71,23 @@ export default function Navbar() {
               {/* Dropdown Menu */}
               {dropdownOpen && (
                 <div className="absolute right-0 top-full mt-2 w-48 bg-white rounded-xl shadow-lg border border-stone-100 py-2 z-50 flex flex-col">
-                  <Link
-                    to="/dashboard"
-                    onClick={() => { setDropdownOpen(false); setOpen(false); }}
-                    className="px-4 py-2 text-sm font-semibold text-stone-600 hover:bg-stone-50 hover:text-amber-500 transition-colors"
-                  >
-                    Dashboard
-                  </Link>
+                  {isAdmin ? (
+                    <Link
+                      to="/admin"
+                      onClick={() => { setDropdownOpen(false); setOpen(false); }}
+                      className="px-4 py-2 text-sm font-semibold text-amber-600 hover:bg-stone-50 hover:text-amber-700 transition-colors"
+                    >
+                      Admin Panel
+                    </Link>
+                  ) : (
+                    <Link
+                      to="/dashboard"
+                      onClick={() => { setDropdownOpen(false); setOpen(false); }}
+                      className="px-4 py-2 text-sm font-semibold text-stone-600 hover:bg-stone-50 hover:text-amber-500 transition-colors"
+                    >
+                      Dashboard
+                    </Link>
+                  )}
                   <Link
                     to="/profile"
                     onClick={() => { setDropdownOpen(false); setOpen(false); }}
