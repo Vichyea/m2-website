@@ -6,7 +6,7 @@ const categories = [
   name: 'Starters',
   dishes: [
     { image: '/images/Amok.png', title: 'Amok Trey', description: 'A traditional Cambodian fish dish cooked with coconut milk, kroeung, and spices.', price: '5.00' },
-    { image: '/images/NumI.png', title: 'Num I', description: 'Soft Khmer glutinous rice balls filled with palm sugar and served with coconut cream.', price: '1.00' },
+    { image: '/images/NumI.png', title: 'Num Plae Ai', description: 'Soft Khmer glutinous rice balls filled with palm sugar and served with coconut cream.', price: '1.00' },
     { image: '/images/LokLak.png', title: 'Lok Lak', description: 'Stir-fried tender beef served with fresh vegetables and a tangy lime and pepper sauce.', price: '8.00' },
   ],
 },

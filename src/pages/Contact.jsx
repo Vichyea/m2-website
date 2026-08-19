@@ -160,7 +160,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-stone-700 mb-1">🕐 Opening Hours</h3>
-                  <p className="text-stone-500">Tuesday – Sunday<br />5:00 PM – 10:00 PM<br /><br />Closed on Mondays</p>
+                  <p className="text-stone-500">Tuesday – Sunday<br />11:00 AM – 10:00 PM<br /><br />Closed on Mondays</p>
                 </div>
               </div>
 

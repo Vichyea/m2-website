@@ -22,7 +22,7 @@ export default function Footer() {
           </div>
           <div>
             <h4 className="text-white font-bold mb-4">Opening Hours</h4>
-            <p className="text-sm leading-relaxed">Tuesday – Sunday<br/>5:00 PM – 10:00 PM<br/><br/>Closed on Mondays</p>
+            <p className="text-sm leading-relaxed">Tuesday – Sunday<br/>11:00 AM – 10:00 PM<br/><br/>Closed on Mondays</p>
           </div>
           <div>
             <h4 className="text-white font-bold mb-4">Contact</h4>
