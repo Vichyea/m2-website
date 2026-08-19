@@ -16,7 +16,7 @@ const dishes = [
   },
   {
     image: '/images/NumI.png',
-    title: 'Num I',
+    title: 'Num Plae Ai',
     description: 'Khmer Glutinous Rice Ball Desserts are more like boba balls but made with rice flour. This dessert has two main elements: the rice balls and the coconut cream sauce with which the Glutinous Rice Balls are dressed.',
     price: '1.50',
   },
