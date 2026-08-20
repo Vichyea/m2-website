@@ -47,6 +47,10 @@ export default function Contact() {
     setError('');
 
     // Extra safety validation in JS (in case browser min/max is bypassed)
+    if (form.phone && form.phone.length !== 9) {
+      setError('Phone number must be exactly 9 digits.');
+      return;
+    }
     if (form.date < todayStr || form.date > maxDateStr) {
       setError('Please select a date between today and 3 days from now.');
       return;
@@ -136,12 +140,24 @@ export default function Contact() {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-semibold text-stone-600 mb-1">Phone</label>
+                      <label className="block text-sm font-semibold text-stone-600 mb-1">Phone <span className="text-stone-400 font-normal">(9 digits)</span></label>
                       <input
-                        type="tel" name="phone" value={form.phone} onChange={handleChange}
+                        type="tel"
+                        name="phone"
+                        value={form.phone}
+                        onChange={(e) => {
+                          // Strip non-digits and limit to 9 characters
+                          const digits = e.target.value.replace(/\D/g, '').slice(0, 9);
+                          setForm({ ...form, phone: digits });
+                        }}
+                        maxLength={9}
+                        pattern="\d{9}"
                         className="w-full px-4 py-3 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition"
-                        placeholder="(855) XXX-XXXX"
+                        placeholder="012345678"
                       />
+                      <p className="text-xs text-stone-400 mt-1">
+                        {form.phone.length}/9 digits
+                      </p>
                     </div>
                     <div className="grid grid-cols-2 gap-4">
                       <div>
@@ -152,16 +168,23 @@ export default function Contact() {
                           max={maxDateStr}
                           className="w-full px-4 py-3 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition"
                         />
-                        <p className="text-xs text-stone-400 mt-1">Only available for today up to 3 days ahead</p>
+                        <p className="text-xs text-stone-400 mt-1">Today up to 3 days ahead</p>
                       </div>
                       <div>
-                        <label className="block text-sm font-semibold text-stone-600 mb-1">Time</label>
+                        <label className={`block text-sm font-semibold mb-1 ${!form.date ? 'text-stone-400' : 'text-stone-600'}`}>Time</label>
                         <input
-                          type="time" name="time" value={form.time} onChange={handleChange} required
+                          type="time"
+                          name="time"
+                          value={form.time}
+                          onChange={handleChange}
+                          required
+                          disabled={!form.date}
                           min={isToday ? currentTimeStr : undefined}
-                          className="w-full px-4 py-3 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition"
+                          className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition ${!form.date ? 'bg-stone-100 border-stone-200 text-stone-400 cursor-not-allowed' : 'border-stone-300'}`}
                         />
-                        {isToday && <p className="text-xs text-stone-400 mt-1">Cannot select a past time for today</p>}
+                        <p className="text-xs text-stone-400 mt-1">
+                          {!form.date ? 'Select a date first' : isToday ? `Min: ${currentTimeStr} (current time)` : 'Any time'}
+                        </p>
                       </div>
                     </div>
                     <div>
