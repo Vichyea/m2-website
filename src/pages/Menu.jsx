@@ -14,7 +14,7 @@ const categories = [
   name: 'Main Courses',
   dishes: [
     { image: '/images/Samlar Kari.png', title: 'Samlor Kari', description: 'A flavorful Cambodian curry soup made with kroeung, coconut milk, vegetables, and pork.', price: '3.50' },
-    { image: '/images/PorkAndRice.png', title: 'Bai Sach Chrouk', description: 'Grilled marinated pork served with steamed rice, pickled vegetables, and a light soup.', price: '5.00' },
+    { image: '/images/PorkAndRice.png', title: 'Bai Sach Chrouk', description: 'Grilled marinated pork served with steamed rice, pickled vegetables, and a light soup.', price: '1.00' },
     { image: '/images/Morn Dot.png', title: 'Morn Dot', description: 'Grilled chicken marinated with Cambodian spices and served with fresh vegetables and sauce.', price: '15.50' },
     { image: '/images/p\'hok dot.png', title: 'P\'hok Dot', description: 'A traditional Cambodian dish made with grilled meat, fresh herbs, and a flavorful dipping sauce.', price: '5.50' },
     { image: '/images/BokLhong.png', title: 'Bok Lhong', description: 'A fresh and spicy Cambodian salad made with papaya, vegetables, herbs, and a flavorful dressing.', price: '4.50' },
