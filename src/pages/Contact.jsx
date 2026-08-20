@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { collection, addDoc } from 'firebase/firestore';
 import { db } from '../firebase/firebase';
@@ -69,77 +70,93 @@ export default function Contact() {
             <div>
               <h2 className="font-serif text-2xl font-bold text-stone-700 mb-6">Make a Reservation</h2>
 
-              {error && (
-                <div className="bg-red-50 text-red-600 text-sm p-3 rounded-lg mb-4">{error}</div>
-              )}
-
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div>
-                  <label className="block text-sm font-semibold text-stone-600 mb-1">Full Name</label>
-                  <input
-                    type="text" name="name" value={form.name} onChange={handleChange} required
-                    className="w-full px-4 py-3 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition"
-                    placeholder="Your name"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-stone-600 mb-1">Email</label>
-                  <input
-                    type="email" name="email" value={form.email} onChange={handleChange} required
-                    className="w-full px-4 py-3 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition"
-                    placeholder="you@example.com"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-stone-600 mb-1">Phone</label>
-                  <input
-                    type="tel" name="phone" value={form.phone} onChange={handleChange}
-                    className="w-full px-4 py-3 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition"
-                    placeholder="(855) XXX-XXXX"
-                  />
-                </div>
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-semibold text-stone-600 mb-1">Date</label>
-                    <input
-                      type="date" name="date" value={form.date} onChange={handleChange} required
-                      className="w-full px-4 py-3 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-semibold text-stone-600 mb-1">Time</label>
-                    <input
-                      type="time" name="time" value={form.time} onChange={handleChange} required
-                      className="w-full px-4 py-3 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-stone-600 mb-1">Number of Guests</label>
-                  <select
-                    name="guests" value={form.guests} onChange={handleChange}
-                    className="w-full px-4 py-3 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition"
+              {!currentUser ? (
+                <div className="bg-amber-50 border border-amber-200 rounded-xl p-8 text-center h-full flex flex-col items-center justify-center min-h-[300px]">
+                  <p className="text-4xl mb-4">🔐</p>
+                  <p className="text-amber-900 font-bold mb-2">Login Required</p>
+                  <p className="text-amber-700 mb-6 text-sm">Please log in or create an account to book a table with us.</p>
+                  <Link 
+                    to="/login" 
+                    className="inline-block bg-amber-500 hover:bg-amber-600 text-white font-semibold px-8 py-3 rounded-lg transition-colors shadow-sm"
                   >
-                    {[1, 2, 3, 4, 5, 6, 7, 8].map((n) => (
-                      <option key={n} value={n}>{n} {n === 1 ? 'Guest' : 'Guests'}</option>
-                    ))}
-                  </select>
+                    Log In to Reserve
+                  </Link>
                 </div>
-                <div>
-                  <label className="block text-sm font-semibold text-stone-600 mb-1">Special Requests</label>
-                  <textarea
-                    name="message" value={form.message} onChange={handleChange} rows="3"
-                    className="w-full px-4 py-3 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition resize-none"
-                    placeholder="Any dietary needs or special occasion?"
-                  ></textarea>
-                </div>
-                <button
-                  type="submit" disabled={loading}
-                  className="w-full bg-amber-500 hover:bg-amber-600 disabled:opacity-50 text-white font-semibold py-3 rounded-lg transition-colors"
-                >
-                  {loading ? 'Submitting...' : 'Reserve Table'}
-                </button>
-              </form>
+              ) : (
+                <>
+                  {error && (
+                    <div className="bg-red-50 text-red-600 text-sm p-3 rounded-lg mb-4">{error}</div>
+                  )}
+
+                  <form onSubmit={handleSubmit} className="space-y-4">
+                    <div>
+                      <label className="block text-sm font-semibold text-stone-600 mb-1">Full Name</label>
+                      <input
+                        type="text" name="name" value={form.name} onChange={handleChange} required
+                        className="w-full px-4 py-3 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition"
+                        placeholder="Your name"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-semibold text-stone-600 mb-1">Email</label>
+                      <input
+                        type="email" name="email" value={form.email} onChange={handleChange} required
+                        className="w-full px-4 py-3 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition"
+                        placeholder="you@example.com"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-semibold text-stone-600 mb-1">Phone</label>
+                      <input
+                        type="tel" name="phone" value={form.phone} onChange={handleChange}
+                        className="w-full px-4 py-3 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition"
+                        placeholder="(855) XXX-XXXX"
+                      />
+                    </div>
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-sm font-semibold text-stone-600 mb-1">Date</label>
+                        <input
+                          type="date" name="date" value={form.date} onChange={handleChange} required
+                          className="w-full px-4 py-3 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-semibold text-stone-600 mb-1">Time</label>
+                        <input
+                          type="time" name="time" value={form.time} onChange={handleChange} required
+                          className="w-full px-4 py-3 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <label className="block text-sm font-semibold text-stone-600 mb-1">Number of Guests</label>
+                      <select
+                        name="guests" value={form.guests} onChange={handleChange}
+                        className="w-full px-4 py-3 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition"
+                      >
+                        {[1, 2, 3, 4, 5, 6, 7, 8].map((n) => (
+                          <option key={n} value={n}>{n} {n === 1 ? 'Guest' : 'Guests'}</option>
+                        ))}
+                      </select>
+                    </div>
+                    <div>
+                      <label className="block text-sm font-semibold text-stone-600 mb-1">Special Requests</label>
+                      <textarea
+                        name="message" value={form.message} onChange={handleChange} rows="3"
+                        className="w-full px-4 py-3 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition resize-none"
+                        placeholder="Any dietary needs or special occasion?"
+                      ></textarea>
+                    </div>
+                    <button
+                      type="submit" disabled={loading}
+                      className="w-full bg-amber-500 hover:bg-amber-600 disabled:opacity-50 text-white font-semibold py-3 rounded-lg transition-colors"
+                    >
+                      {loading ? 'Submitting...' : 'Reserve Table'}
+                    </button>
+                  </form>
+                </>
+              )}
             </div>
 
             {/* Contact Info */}
