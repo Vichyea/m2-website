@@ -19,15 +19,44 @@ export default function Contact() {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
+  // --- Date / Time helpers ---
+  // Today's date string for min attribute e.g. "2026-08-20"
+  const todayStr = new Date().toLocaleDateString('en-CA');
+
+  // Max date = today + 3 days
+  const maxDate = new Date();
+  maxDate.setDate(maxDate.getDate() + 3);
+  const maxDateStr = maxDate.toLocaleDateString('en-CA');
+
+  // Current time string for min attribute e.g. "10:19" — only applied when selected date is today
+  const now = new Date();
+  const currentTimeStr = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
+  const isToday = form.date === todayStr;
+
   function handleChange(e) {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    const updated = { ...form, [e.target.name]: e.target.value };
+    // If user changes date to a future date, clear time so old times don't get through
+    if (e.target.name === 'date' && e.target.value !== todayStr) {
+      updated.time = '';
+    }
+    setForm(updated);
   }
 
   async function handleSubmit(e) {
     e.preventDefault();
     setError('');
-    setLoading(true);
 
+    // Extra safety validation in JS (in case browser min/max is bypassed)
+    if (form.date < todayStr || form.date > maxDateStr) {
+      setError('Please select a date between today and 3 days from now.');
+      return;
+    }
+    if (isToday && form.time < currentTimeStr) {
+      setError('Please select a time that is not in the past.');
+      return;
+    }
+
+    setLoading(true);
     try {
       await addDoc(collection(db, 'reservations'), {
         ...form,
@@ -41,6 +70,7 @@ export default function Contact() {
     }
     setLoading(false);
   }
+
 
   if (submitted) {
     return (
@@ -118,15 +148,20 @@ export default function Contact() {
                         <label className="block text-sm font-semibold text-stone-600 mb-1">Date</label>
                         <input
                           type="date" name="date" value={form.date} onChange={handleChange} required
+                          min={todayStr}
+                          max={maxDateStr}
                           className="w-full px-4 py-3 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition"
                         />
+                        <p className="text-xs text-stone-400 mt-1">Only available for today up to 3 days ahead</p>
                       </div>
                       <div>
                         <label className="block text-sm font-semibold text-stone-600 mb-1">Time</label>
                         <input
                           type="time" name="time" value={form.time} onChange={handleChange} required
+                          min={isToday ? currentTimeStr : undefined}
                           className="w-full px-4 py-3 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition"
                         />
+                        {isToday && <p className="text-xs text-stone-400 mt-1">Cannot select a past time for today</p>}
                       </div>
                     </div>
                     <div>
